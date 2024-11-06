@@ -62,10 +62,39 @@ const calc = (a, b) => a + b;
 
 console.log(calc(1, 5));
 
+//////////////////////////////////////////////////////////////
+
+const usdCurr = 13;
+const discount = 5;
+
+function convert(amount, curr) {
+    return curr * amount;
+}
+
+function promotion(result) {
+    console.log(result % discount);
+}
+
+const res = convert(2, usdCurr);
+promotion(res);
+
+//////////////////////////////////////////////////////////////
+
+function test() {
+    for(let i = 0; i < 5; i++) {
+        console.log(i);
+        if (i === 3) return
+    }
+    console.log("Done");
+} 
+
+test();
+
+//////////////////////////////////////////////////////////////
 
 
-let c = 4
-const addX = x => n => n + x
-const addThree = addX(3)
-let d = addThree(c)
-console.log('example partial application', d);
+
+
+
+
+
