@@ -74,5 +74,14 @@ const clone = Object.assign({}, add);
 clone.f  = 23;
 
 console.log(add);
-console.log()
+console.log(clone);
 
+const metaFake = ["v", "b", "noen"];
+const betaArray = metaFake.slice();
+
+betaArray[1] = "babaika";
+
+console.log(betaArray);
+console.log(metaFake);
+
+/////////////////////////////////////////////////////////////////
