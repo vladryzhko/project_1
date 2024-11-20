@@ -149,13 +149,101 @@ function availableCurr(arr, missingCurr) {
 
 console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
 
+////////////////////////////////////////////////////////////////////////////////////
+
+
+const shoppingMallData = {
+    shops: [
+        {
+            width: 10,
+            length: 5
+        },
+        {
+            width: 15,
+            length: 7
+        },
+        {
+            width: 20,
+            length: 5
+        },
+        {
+            width: 8,
+            length: 10
+        }
+    ],
+    height: 5,
+    moneyPer1m3: 30,
+    budget: 50000
+}
+
+function isBudgetEnough(data) {
+    let square = 0;
+    let volume = 0;
+
+    data.shops.forEach(function(shop) {
+        square += shop.width * shop.length;
+    });
+    
+
+    volume = data.height * square;
+
+
+    if (data.budget - (volume * data.moneyPer1m3) >= 0) {
+        return "Бюджета достаточно";
+    } else {
+        return "Бюджета недостаточно";
+    }
+}
+console.log(isBudgetEnough(shoppingMallData));
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+function sortStudentsByGroups(arr) {   
+    arr.sort();
+    let a = [], b = [], c = [], rest = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (i < 3) {
+            a.push(arr[i]);
+        } else if (i < 6) {
+            b.push(arr[i]);
+        } else if (i < 9) {
+           c.push(arr[i]);
+        } else {
+            rest.push(arr[i]);
+        }
+    }
+    return [a, b, c, `Оставшиеся студенты: ${rest.length === 0 ? "-" : rest.join(", ")}`]
+}
+console.log(sortStudentsByGroups(students));
 
 
 
+const coWorker = ["ataly", "pavel", "cikheal", "john", "nevel", "tolik"];
+
+function showTirCommador(obj) {
+    obj.sort();
+    let q = [], g = [], last = [];
+
+    for (let i = 0; i < obj.length; i++) {
+        if (i < 3) {
+            q.push(obj[i]);
+        } else if (i < 6) {
+            g.push(obj[i]);
+        } else {
+            last.push(obj[i]);
+        }
+    }
+    return [q, g, `last students write : ${last.length === 0 ? "-" : last.join(", ")}`]
+}
+console.log(showTirCommador(coWorker));
 
 
 
-
+////////////////////////////////////////////////////////////////////////////////////
 
 
 
