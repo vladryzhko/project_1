@@ -122,7 +122,6 @@ let nameStretch = {
  
  ///////////////////////////////////////////////////////
  
- 
  let obj = { 
      a: 'a',
      b: { 
@@ -140,3 +139,19 @@ let nameStretch = {
    let newObj = Object.assign({}, obj);
    
    console.log(newObj);
+
+ ///////////////////////////////////////////////////////
+
+ const nameTag = ["Vlad", "Maria", "Karina", "Violetta", "Zoe", "Tom"];
+
+
+ function choseYourName(invite) {
+    return invite.filter( (name) => {
+        return name.length >= 5;
+    });
+}
+
+ console.log(choseYourName(nameTag));
+
+
+   
