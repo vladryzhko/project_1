@@ -153,5 +153,22 @@ let nameStretch = {
 
  console.log(choseYourName(nameTag));
 
+ ///////////////////////////////////////////////////////
 
-   
+ function dontStealMyWord(l) {
+    return l.filter( str => typeof str != "string" && str > 0);
+ }
+ 
+ 
+ console.log(dontStealMyWord([1, 3, 'g', 's', 5, -2, 0]));
+
+///////////////////////////////////////////////////////
+
+function highAndLow(numbers){
+  numbers = numbers.split(" ");
+  return Math.max.apply(null, numbers) + " " + Math.min.apply(null, numbers);
+}
+
+console.log(highAndLow('1 2 5 -4 -6 10 200'));
+
+
