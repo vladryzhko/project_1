@@ -172,3 +172,10 @@ function highAndLow(numbers){
 console.log(highAndLow('1 2 5 -4 -6 10 200'));
 
 
+///////////////////////////////////////////////////////
+function order(n) {
+    return Number(n.toString().split("").sort((a,b) => a-b).reverse().join(""));
+};
+
+console.log(order(1,2,3,4,5,6,83,3,4,6,7,6,2,35));
+
