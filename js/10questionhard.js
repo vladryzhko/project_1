@@ -240,38 +240,3 @@ function showTirCommador(obj) {
     return [q, g, `last students write : ${last.length === 0 ? "-" : last.join(", ")}`]
 }
 console.log(showTirCommador(coWorker));
-
-
-
-////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// showAgeAndLangs: function(plan) {
-//     const {age} = plan;
-//     const {languages} = plan.skills;
-//     let str = `Мне ${age} лет и я влядею языками: `;
-
-//     languages.forEach(function(lang) {
-//         str += `${lang.toUpperCase()} `;
-//     });
-//     return str;
-// }

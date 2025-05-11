@@ -84,7 +84,7 @@ function writeYourGenres() {
     for (let i = 1; i <=3; i++) {
         // let genre = prompt(`Ваш любимый жанро под номером ${i}`);
         // personalMovieDB.genres[i - 1] = genre;
-        personalMovieDB[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
     }
 }
 

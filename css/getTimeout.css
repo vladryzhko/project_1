@@ -6,7 +6,15 @@
     border: none;
     justify-content: center;
     align-items: center;
+    border: 1px solid;
 }
+
+.btn:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: green;
+}
+
 .wrapper {
     position: relative;
     margin: auto;

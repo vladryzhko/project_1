@@ -71,12 +71,12 @@ function convert(amount, curr) {
     return curr * amount;
 }
 
-function promotion(result) {
-    console.log(result % discount);
+function promotion(result, how) {
+    console.log(result % how);
 }
 
 const res = convert(2, usdCurr);
-promotion(res);
+promotion(res, discount);
 
 //////////////////////////////////////////////////////////////
 
@@ -92,9 +92,26 @@ test();
 
 //////////////////////////////////////////////////////////////
 
+function doNothing() {}
+console.log(doNothing() === undefined);
 
 
+function getMathResult(num, times) {
+    if (typeof(times) != 'number' || times <= 0) {
+        return num
+    }
+    
+    let str = "";
 
+    for (let i = 1; i <= times; i++) {
+        if (i === times) {
+           str += `${num * i}`; 
+        } else {
+            str += `${num * i}---`
+        }
+    }
+    return str;
+}
 
-
+console.log(getMathResult(2, 5))
 

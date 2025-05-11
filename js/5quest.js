@@ -41,7 +41,7 @@ console.log(logg.slice(0, 6,));
 //////////////////////////////////////////////////////////////
 
 const publ = "heelo dude";
-console.log(publ.substr(0));
+console.log(publ.substring(0));
 
 //////////////////////////////////////////////////////////////
 
@@ -91,37 +91,35 @@ console.log(getCOupeNumber(8));
 
 //////////////////////////////////////////////////////////////
 
-function getTimeFromMinutes(minutesTotal) {
-    if (typeof(minutesTotal) !== "number" || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+function howMuchTimes(time) {
+    if (typeof(time) !== "number" || time < 0 || !Number.isInteger(time)) {
         return "Ошибка, проверьте данные";
     }
-    
-    const hours = Math.floor(minutesTotal / 60);
-    const minutes = minutesTotal % 60;
-    
-    let hoursStr = "";
-    
+
+    const hours = Math.floor(time / 60);
+    const minutes = time % 60;
+
+    let strTime = "";
+
     switch (hours) {
         case 0 :
-            hoursStr = "часов";
+            strTime = "часов";
             break;
-        case 1 :
-            hoursStr = "час";
+        case 1 : 
+            strTime = "час";
             break;
         case 2 :
         case 3 :
         case 4 :
-            hoursStr = "часа";
-            break;       
-        default:
-            hoursStr = "часов";
+            strTime = "часа";
+            break;
+        default : 
+            strTime: "часов"
     }
+    return (`Это ${hours} ${strTime} и ${minutes} минунт`)
+}
 
-    return `Это ${hours} ${hoursStr} и ${minutes} минут`
-   
-   }
-
-console.log(getTimeFromMinutes(600));
+console.log(howMuchTimes(150));
 
 //////////////////////////////////////////////////////////////
 
@@ -136,7 +134,7 @@ function findMaxNumber(a, b, c, d) {
     }
 } 
 
-console.log(findMaxNumber(20, 30, 50, 200));
+console.log(findMaxNumber(30, 50, 200));
 
 //////////////////////////////////////////////////////////////
 
@@ -162,6 +160,7 @@ function fib(num) {
         
     }
     
+    console.log(first)
     return result;
 }
 

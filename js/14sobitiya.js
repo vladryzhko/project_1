@@ -1,17 +1,26 @@
 "use strict";
 
 const btns = document.querySelectorAll("button"),
-      overley = document.querySelector(".overlay");
+      overlay = document.querySelector(".overlay");
 
 // btn.onclick = function() {
-//   prompt("Ты дурак?");  
+//   alert("Ты дурак?");         // добавления обработчика событий устаревший вариант
 // };
 
+////////////////////////////////////////////////////////////
 
 // btn.addEventListener("click", () => {
-//     alert("narubi pary churok");
+//     alert("narubi pary churok");         //  новый вариант, более мобильный.
+//     alert("darova");
 // });
 
+////////////////////////////////////////////////////////////
+
+// btn.addEventListener("mouseenter", (event) => {
+//     console.log(event.target);
+//     event.target.remove();
+//     // console.log('Hover');
+// });
 
 
 // btn.addEventListener("click", (e) => {
@@ -20,31 +29,31 @@ const btns = document.querySelectorAll("button"),
 //     // console.log("Hover");
 // });
 
+////////////////////////////////////////////////////////////
+
 let i = 0
 
 const deleteElement = (e) => {
-    console.log(e.target);
-    console.log(e.type);
+    console.log(e.currentTarget);
+    console.log(e.type)
     // i++
     // if (i == 4) {
-    //     e.target.remove();
-    //     // btn.removeEventListener("click", deleteElement);
+    //     btns.removeEventListener("click", deleteElement);
     // }
 };
 
-
-// btns.addEventListener("click", deleteElement);
-// overley.addEventListener("click", deleteElement);
+// btn.addEventListener('click', deleteElement);
+// overlay.addEventListener("click", deleteElement);
 
 btns.forEach( btn => {
     btn.addEventListener("click", deleteElement, {once: true});
 });
 
 
-const link = document.querySelector('a');
+// const link = document.querySelector('a');
 
-link.addEventListener("click", event => {
-    event.preventDefault();
+// link.addEventListener("click", event => {
+//     event.preventDefault();
 
-    console.log(event.target);
-});
+//     console.log(event.target);
+// });

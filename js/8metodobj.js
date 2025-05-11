@@ -51,32 +51,11 @@ for (let key in options) {
     for (let i in options[key]) {
         console.log(`в ячейке ${i} значение ${options[key][i]}`)
     }
-   } else {
-    console.log(`в ячейке ${key} значение ${options[key]}`)
-   }
+} else {
+       console.log(`в ячейке ${key} значение ${options[key]}`)
+}
 }
 
 
-/////////////////////////////////////////////////////////////////////////
-
-//Массивы и псевдомассивы
-
-const arr = [2, 4, 6, 7, 20];
-
-arr.pop();
-arr.push(21);
-console.log(arr);
-
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
-
-for (let value of arr) {
-    console.log(value);
-}
-
-arr.forEach(function(item, i, arr) {
-    console.log(`${i} находится: ${item} внутри всего ${arr}`);
-});
 
 
